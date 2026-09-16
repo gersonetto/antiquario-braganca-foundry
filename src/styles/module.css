@@ -28,6 +28,7 @@
      precisa quebrar — força bloco normal em todo botão nosso. */
   .antiquario-braganca button {
     white-space: normal;
+    height: auto;
   }
 
   .theme-dark .antiquario-braganca {
@@ -301,6 +302,14 @@
     opacity: 0.82;
   }
 
+  /* ---------- Modification dialog ---------- */
+  .ab-modification-dialog__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
   /* ---------- Modification prose ---------- */
   .ab-modal-prose {
     font-family: var(--font-primary, 'Cormorant Garamond', serif);
@@ -352,6 +361,7 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
+    height: auto;
     min-width: 0;
     box-sizing: border-box;
     text-align: left;
@@ -359,6 +369,8 @@
     background: transparent;
     padding: 0.6rem;
     cursor: pointer;
+    overflow: visible;
+    line-height: normal;
   }
   .ab-modo-card__title,
   .ab-modo-card__desc {

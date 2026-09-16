@@ -14,6 +14,7 @@ export const TEMPLATES = {
   sorteioConfig: `modules/${MODULE_ID}/templates/sorteio/sorteio-config.hbs`,
   sorteioReview: `modules/${MODULE_ID}/templates/sorteio/sorteio-review.hbs`,
   chatCard: `modules/${MODULE_ID}/templates/chat/sorteio-chat-card.hbs`,
+  modificationChatCard: `modules/${MODULE_ID}/templates/chat/modification-chat-card.hbs`,
 } as const;
 
 // Nomes de partial registrados via loadTemplates() no hook 'init' (ver src/module.ts).

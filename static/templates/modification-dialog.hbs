@@ -1,5 +1,10 @@
 <div class="ab-modification-dialog">
-  <p style="color: var(--ab-mod); margin: 0;">Anotação do mestre</p>
+  <div class="ab-modification-dialog__header">
+    <p style="color: var(--ab-mod); margin: 0;">Anotação do mestre</p>
+    <button type="button" class="ab-chat-reroll" data-action="publish-modification" data-tooltip="Publicar no chat">
+      <i class="fa-solid fa-bullhorn" aria-hidden="true"></i>
+    </button>
+  </div>
   <h2 style="font-family: var(--font-primary, 'Cormorant Garamond', serif); margin: 0.2em 0 0.6em;">{{itemName}}</h2>
   <div class="ab-modal-prose">{{{html}}}</div>
 </div>

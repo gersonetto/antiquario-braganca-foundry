@@ -15,6 +15,9 @@ export class ModificationApplication extends HandlebarsApplicationMixin(Applicat
       resizable: true,
     },
     position: { width: 480, height: 'auto' },
+    actions: {
+      'publish-modification': ModificationApplication.#onPublish,
+    },
   };
 
   static PARTS = {
@@ -33,5 +36,14 @@ export class ModificationApplication extends HandlebarsApplicationMixin(Applicat
       itemName: this.#item.name,
       html: renderModificationText(this.#item.modification?.text ?? ''),
     };
+  }
+
+  static async #onPublish(this: ModificationApplication) {
+    const content = await foundry.applications.handlebars.renderTemplate(TEMPLATES.modificationChatCard, {
+      itemName: this.#item.name,
+      html: renderModificationText(this.#item.modification?.text ?? ''),
+    });
+    await ChatMessage.create({ content, speaker: ChatMessage.getSpeaker() });
+    ui.notifications.info('Anotação publicada no chat.');
   }
 }
