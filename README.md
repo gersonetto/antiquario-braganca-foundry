@@ -9,13 +9,10 @@ Foundry.
 
 ## Antes de instalar
 
-1. **Substitua `SEU_USUARIO`** em `static/module.json` (campos `url`, `manifest`,
-   `download`) pelo seu usuário/organização do GitHub, depois de criar o
-   repositório.
-2. **Configure a URL do catálogo** dentro do Foundry: Configurar Ajustes →
-   Módulos → "URL do catálogo" → cole `https://<seu-site>/api/catalog`. Sem
-   isso o catálogo fica vazio (o módulo não tem fallback de dados embutido na
-   primeira instalação, só depois do primeiro fetch bem-sucedido).
+**Configure a URL do catálogo** dentro do Foundry: Configurar Ajustes →
+Módulos → "URL do catálogo" → cole `https://<seu-site>/api/catalog`. Sem
+isso o catálogo fica vazio (o módulo não tem fallback de dados embutido na
+primeira instalação, só depois do primeiro fetch bem-sucedido).
 
 ## Desenvolvimento
 
