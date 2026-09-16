@@ -22,7 +22,7 @@ export class SorteioApplication extends HandlebarsApplicationMixin(ApplicationV2
     id: 'antiquario-braganca-sorteio',
     classes: ['antiquario-braganca'],
     window: {
-      title: 'ANTIQUARIO.Sorteio.windowTitle',
+      title: 'Invocação do Relicário',
       icon: 'fa-solid fa-dice',
       resizable: true,
     },
@@ -55,7 +55,7 @@ export class SorteioApplication extends HandlebarsApplicationMixin(ApplicationV2
   async _onFirstRender(context: unknown, options: unknown) {
     await super._onFirstRender(context, options);
     if (!game.user.isGM) {
-      ui.notifications.error(game.i18n.localize('ANTIQUARIO.Shop.sorteioGmOnly'));
+      ui.notifications.error('Somente o mestre pode usar o sorteio.');
       this.close();
     }
   }
@@ -123,7 +123,7 @@ export class SorteioApplication extends HandlebarsApplicationMixin(ApplicationV2
     const slotIndex = Number(target.dataset.slotIndex);
     const outcome = rerollSlot(this.#items, this.#config, this.#result, slotIndex);
     if (!outcome.changed) {
-      ui.notifications.warn(game.i18n.localize('ANTIQUARIO.Sorteio.rerollExhausted'));
+      ui.notifications.warn('Não há outro item disponível para rerolar esse slot.');
       return;
     }
     this.#result = outcome.result;

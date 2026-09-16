@@ -60,7 +60,7 @@ async function handleRerollPublished(message: any, slotIndex: number): Promise<v
   const outcome = rerollSlot(items, stored.config, currentResult, slotIndex);
 
   if (!outcome.changed) {
-    ui.notifications.warn(game.i18n.localize('ANTIQUARIO.Sorteio.rerollExhausted'));
+    ui.notifications.warn('Não há outro item disponível para rerolar esse slot.');
     return;
   }
 

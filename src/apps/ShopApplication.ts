@@ -15,7 +15,7 @@ export class ShopApplication extends HandlebarsApplicationMixin(ApplicationV2) {
     id: 'antiquario-braganca-shop',
     classes: ['antiquario-braganca'],
     window: {
-      title: 'ANTIQUARIO.Shop.title',
+      title: 'Antiquário de Bragança',
       icon: 'fa-solid fa-scroll',
       resizable: true,
     },
@@ -84,7 +84,7 @@ export class ShopApplication extends HandlebarsApplicationMixin(ApplicationV2) {
       })),
       filtered: filteredRaw.map((item) => toItemViewModel(item, this.#currency)),
       resultCountLabel: this.#loadError
-        ? game.i18n.localize('ANTIQUARIO.Shop.loadFailed')
+        ? 'Não foi possível carregar o catálogo.'
         : `${filteredRaw.length} ${filteredRaw.length === 1 ? 'item encontrado' : 'itens encontrados'}`,
     };
   }
@@ -127,7 +127,7 @@ export class ShopApplication extends HandlebarsApplicationMixin(ApplicationV2) {
 
   static #onOpenSorteio(this: ShopApplication) {
     if (!game.user.isGM) {
-      ui.notifications.warn(game.i18n.localize('ANTIQUARIO.Shop.sorteioGmOnly'));
+      ui.notifications.warn('Somente o mestre pode usar o sorteio.');
       return;
     }
     new SorteioApplication(this.#items).render({ force: true });
@@ -136,9 +136,9 @@ export class ShopApplication extends HandlebarsApplicationMixin(ApplicationV2) {
   static async #onRefreshCatalog(this: ShopApplication) {
     try {
       await getCatalog({ force: true });
-      ui.notifications.info(game.i18n.localize('ANTIQUARIO.Shop.refreshed'));
+      ui.notifications.info('Catálogo atualizado.');
     } catch {
-      ui.notifications.warn(game.i18n.localize('ANTIQUARIO.Shop.refreshFailed'));
+      ui.notifications.warn('Não foi possível atualizar o catálogo agora — mostrando a última cópia salva.');
     }
     this.render();
   }

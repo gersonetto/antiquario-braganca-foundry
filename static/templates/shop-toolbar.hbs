@@ -4,7 +4,7 @@
       type="text"
       name="search"
       value="{{search}}"
-      placeholder="{{localize 'ANTIQUARIO.Shop.searchPlaceholder'}}"
+      placeholder="Buscar por nome do item…"
       data-role="search-input"
     >
   </label>
@@ -28,10 +28,10 @@
   </div>
 
   {{#if isGM}}
-    <button type="button" class="ab-btn ab-btn-sorteio" data-action="open-sorteio">{{localize 'ANTIQUARIO.Shop.sorteioButton'}}</button>
+    <button type="button" class="ab-btn ab-btn-sorteio" data-action="open-sorteio">✦ Invocar</button>
   {{/if}}
 
-  <button type="button" class="ab-refresh" data-action="refresh-catalog" data-tooltip="{{localize 'ANTIQUARIO.Shop.refresh'}}">
+  <button type="button" class="ab-refresh" data-action="refresh-catalog" data-tooltip="Atualizar catálogo">
     <i class="fa-solid fa-rotate" aria-hidden="true"></i>
   </button>
 </div>

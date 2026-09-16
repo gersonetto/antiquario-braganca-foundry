@@ -8,9 +8,9 @@ import { ShopApplication } from './apps/ShopApplication';
  */
 export function registerShopMenu(): void {
   game.settings.registerMenu(MODULE_ID, 'openShop', {
-    name: 'ANTIQUARIO.Settings.openShop.name',
-    label: 'ANTIQUARIO.Settings.openShop.label',
-    hint: 'ANTIQUARIO.Settings.openShop.hint',
+    name: 'Antiquário de Bragança',
+    label: 'Abrir Antiquário',
+    hint: 'Abre o catálogo de itens mágicos raros.',
     icon: 'fa-solid fa-scroll',
     type: ShopApplication,
     restricted: false,

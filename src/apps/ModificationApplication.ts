@@ -10,7 +10,7 @@ export class ModificationApplication extends HandlebarsApplicationMixin(Applicat
     id: 'antiquario-braganca-modification',
     classes: ['antiquario-braganca'],
     window: {
-      title: 'ANTIQUARIO.Modification.title',
+      title: 'Anotação do mestre',
       icon: 'fa-solid fa-scroll',
       resizable: true,
     },

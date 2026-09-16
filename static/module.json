@@ -2,7 +2,7 @@
   "id": "antiquario-braganca",
   "title": "Antiquário de Bragança",
   "description": "Catálogo de itens mágicos raros e ferramenta de sorteio para o mestre.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "compatibility": {
     "minimum": "13",
@@ -20,20 +20,13 @@
       "layer": "modules"
     }
   ],
-  "languages": [
-    {
-      "lang": "pt-BR",
-      "name": "Português (Brasil)",
-      "path": "lang/pt-BR.json"
-    }
-  ],
   "flags": {
     "hotReload": {
       "extensions": ["hbs", "css", "json"],
-      "paths": ["templates", "styles", "lang"]
+      "paths": ["templates", "styles"]
     }
   },
   "url": "https://github.com/gersonetto/antiquario-braganca-foundry",
   "manifest": "https://github.com/gersonetto/antiquario-braganca-foundry/releases/latest/download/module.json",
-  "download": "https://github.com/gersonetto/antiquario-braganca-foundry/releases/download/v0.1.1/module.zip"
+  "download": "https://github.com/gersonetto/antiquario-braganca-foundry/releases/download/v0.1.2/module.zip"
 }

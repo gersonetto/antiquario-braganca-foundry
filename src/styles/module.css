@@ -46,6 +46,27 @@
 
   .antiquario-braganca .window-content {
     background: var(--ab-bg);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 0;
+  }
+  .antiquario-braganca .window-content > * {
+    min-height: 0;
+  }
+  /* Toolbar (ShopApplication) fica de altura fixa; as demais partes ganham
+     scroll próprio — cobre o caso do Foundry envolver cada PART num wrapper
+     extra, já que min-height:0 no filho direto de window-content garante que
+     o shrink de flexbox funcione em qualquer nível dessa cadeia. */
+  .antiquario-braganca .ab-toolbar {
+    flex: 0 0 auto;
+  }
+  .antiquario-braganca .ab-layout,
+  .antiquario-braganca .ab-sorteio-app,
+  .antiquario-braganca .ab-modification-dialog {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
   }
 
   /* ---------- Toolbar ---------- */

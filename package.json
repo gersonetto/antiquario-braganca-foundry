@@ -1,6 +1,6 @@
 {
   "name": "antiquario-braganca-foundry",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "type": "module",
   "description": "Catálogo de itens mágicos raros e ferramenta de sorteio para o mestre — módulo Foundry VTT.",

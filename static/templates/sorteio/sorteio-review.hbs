@@ -3,7 +3,7 @@
     <h2 style="font-family: var(--font-primary, 'Cormorant Garamond', serif); margin: 0;">{{modoTitle}}</h2>
     <p style="font-size: 0.78rem; color: var(--ab-ink-muted); margin: 0.2em 0 0;">{{rarityLabel}} · {{categoryLabel}}</p>
   </div>
-  <button type="button" class="ab-btn" data-action="back-to-config">{{localize 'ANTIQUARIO.Sorteio.back'}}</button>
+  <button type="button" class="ab-btn" data-action="back-to-config">◀ Nova configuração</button>
 </div>
 
 {{#if warning}}
@@ -11,7 +11,7 @@
 {{/if}}
 
 {{#if empty}}
-  <p class="ab-empty">{{localize 'ANTIQUARIO.Sorteio.empty'}}</p>
+  <p class="ab-empty">Nenhum item encontrado para essa raridade e temática.</p>
 {{else}}
   <section class="ab-grid">
     {{#each slots}}
@@ -19,14 +19,14 @@
         {{> antiquario-braganca-item-card item}}
         <div class="ab-sorteio-slot__footer">
           {{#if guaranteedCategory}}
-            <span class="ab-sorteio-guaranteed">{{localize 'ANTIQUARIO.Sorteio.guaranteed'}}</span>
+            <span class="ab-sorteio-guaranteed">✦ temática garantida</span>
           {{else}}
             <span></span>
           {{/if}}
-          <button type="button" class="ab-chat-reroll" data-action="reroll-slot" data-slot-index="{{slotIndex}}">{{localize 'ANTIQUARIO.Sorteio.reroll'}}</button>
+          <button type="button" class="ab-chat-reroll" data-action="reroll-slot" data-slot-index="{{slotIndex}}">↻ sortear de novo</button>
         </div>
       </div>
     {{/each}}
   </section>
-  <button type="button" class="ab-sorteio-submit" data-action="publish" style="margin-top: 0.75rem;">{{localize 'ANTIQUARIO.Sorteio.publish'}}</button>
+  <button type="button" class="ab-sorteio-submit" data-action="publish" style="margin-top: 0.75rem;">Publicar no chat</button>
 {{/if}}

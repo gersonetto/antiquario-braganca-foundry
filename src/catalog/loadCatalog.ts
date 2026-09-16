@@ -13,8 +13,8 @@ let memoryCache: CachedCatalog | null = null;
 
 export function registerCatalogSettings(): void {
   game.settings.register(MODULE_ID, SETTINGS.catalogApiUrl, {
-    name: 'ANTIQUARIO.Settings.apiUrl.name',
-    hint: 'ANTIQUARIO.Settings.apiUrl.hint',
+    name: 'URL do catálogo',
+    hint: 'Endereço da rota /api/catalog do site do Antiquário de Bragança.',
     scope: 'world',
     config: true,
     type: String,
