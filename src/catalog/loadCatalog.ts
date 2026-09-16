@@ -2,6 +2,7 @@ import { MODULE_ID, SETTINGS } from '../constants';
 import type { CatalogItem } from './types';
 
 const CACHE_TTL_MS = 5 * 60 * 1000;
+const DEFAULT_CATALOG_API_URL = 'https://antiquario-braganca.vercel.app/api/catalog';
 
 interface CachedCatalog {
   items: CatalogItem[];
@@ -17,7 +18,7 @@ export function registerCatalogSettings(): void {
     scope: 'world',
     config: true,
     type: String,
-    default: '',
+    default: DEFAULT_CATALOG_API_URL,
   });
 
   // Última cópia boa do catálogo, usada quando o fetch ao vivo falha. Só o GM

@@ -7,12 +7,13 @@ rodar dentro do Foundry VTT (v13/v14). Vanilla TypeScript + Handlebars
 quase literal do site; a camada de UI foi reescrita nos padrões nativos do
 Foundry.
 
-## Antes de instalar
+## Instalação
 
-**Configure a URL do catálogo** dentro do Foundry: Configurar Ajustes →
-Módulos → "URL do catálogo" → cole `https://<seu-site>/api/catalog`. Sem
-isso o catálogo fica vazio (o módulo não tem fallback de dados embutido na
-primeira instalação, só depois do primeiro fetch bem-sucedido).
+Sem passo manual necessário — a URL do catálogo
+(`https://antiquario-braganca.vercel.app/api/catalog`) já vem configurada
+como padrão do setting. Se um dia você trocar de domínio ou quiser hospedar
+seu próprio fork do site, só ajustar em Configurar Ajustes → Módulos →
+"URL do catálogo".
 
 ## Desenvolvimento
 
