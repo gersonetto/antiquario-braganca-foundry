@@ -1,0 +1,18 @@
+<div class="ab-chat-card">
+  <h3>{{localize 'ANTIQUARIO.Sorteio.chatHeading'}}</h3>
+  <div class="ab-grid">
+    {{#each slots}}
+      <div class="ab-sorteio-slot">
+        {{> antiquario-braganca-item-card item}}
+        <div class="ab-sorteio-slot__footer">
+          {{#if guaranteedCategory}}
+            <span class="ab-sorteio-guaranteed">{{localize 'ANTIQUARIO.Sorteio.guaranteed'}}</span>
+          {{else}}
+            <span></span>
+          {{/if}}
+          <button type="button" class="ab-chat-reroll" data-action="reroll-published-slot" data-slot-index="{{slotIndex}}">{{localize 'ANTIQUARIO.Sorteio.rerollPublished'}}</button>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

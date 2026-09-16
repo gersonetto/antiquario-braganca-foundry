@@ -1,0 +1,22 @@
+{
+  "name": "antiquario-braganca-foundry",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Catálogo de itens mágicos raros e ferramenta de sorteio para o mestre — módulo Foundry VTT.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite build --watch --mode development",
+    "build": "vite build",
+    "prebuild": "node ./scripts/prebuild.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "vite": "^5.4.0",
+    "vitest": "^2.1.0"
+  }
+}

@@ -1,0 +1,39 @@
+<article class="ab-item-card" data-item-id="{{id}}" style="--ab-rarity-color: var(--ab-rarity-{{rarityId}})">
+  <span class="ab-item-card__corner"></span>
+
+  {{#if hasModificationCompleta}}
+    <button
+      type="button"
+      class="ab-item-card__seal ab-item-card__seal--completa"
+      data-action="open-modification"
+      data-item-id="{{id}}"
+      aria-label="Ver anotação do mestre sobre {{name}}"
+    >✦</button>
+  {{/if}}
+  {{#if hasModificationSimples}}
+    <span
+      class="ab-item-card__seal ab-item-card__seal--simples"
+      data-tooltip="{{localize 'ANTIQUARIO.Modification.tooltipSimples'}}"
+    >✦</span>
+  {{/if}}
+
+  <div class="ab-item-card__meta">
+    <span class="ab-item-card__categories">{{categoriesLabel}}</span>
+    <span class="ab-item-card__rarity">{{rarityLabel}}</span>
+  </div>
+
+  <h3 class="ab-item-card__name">{{name}}</h3>
+  <p class="ab-item-card__type">{{typeLine}}</p>
+
+  <div class="ab-item-card__footer">
+    <div class="ab-coins">
+      {{#each coins}}
+        <span class="ab-coin ab-coin--{{key}}">{{value}}<i>{{key}}</i></span>
+      {{/each}}
+    </div>
+  </div>
+
+  {{#if source}}
+    <p class="ab-item-card__source">Proveniência: {{source}}</p>
+  {{/if}}
+</article>

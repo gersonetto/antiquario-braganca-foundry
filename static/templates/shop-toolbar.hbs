@@ -1,0 +1,37 @@
+<div class="ab-toolbar">
+  <label class="ab-search">
+    <input
+      type="text"
+      name="search"
+      value="{{search}}"
+      placeholder="{{localize 'ANTIQUARIO.Shop.searchPlaceholder'}}"
+      data-role="search-input"
+    >
+  </label>
+
+  <div class="ab-filter-group" role="group" aria-label="Raridade">
+    {{#each rarities}}
+      <button
+        type="button"
+        class="ab-btn"
+        style="--ab-rarity: var(--ab-rarity-{{id}})"
+        aria-pressed="{{active}}"
+        data-action="toggle-rarity"
+        data-id="{{id}}"
+      >{{label}}</button>
+    {{/each}}
+  </div>
+
+  <div class="ab-filter-group" role="group" aria-label="Moeda">
+    <button type="button" class="ab-btn ab-currency-btn" aria-pressed="{{isBraganca}}" data-action="set-currency" data-value="braganca">Economia de Bragança</button>
+    <button type="button" class="ab-btn ab-currency-btn" aria-pressed="{{isDnd}}" data-action="set-currency" data-value="dnd">Padrão D&amp;D</button>
+  </div>
+
+  {{#if isGM}}
+    <button type="button" class="ab-btn ab-btn-sorteio" data-action="open-sorteio">{{localize 'ANTIQUARIO.Shop.sorteioButton'}}</button>
+  {{/if}}
+
+  <button type="button" class="ab-refresh" data-action="refresh-catalog" data-tooltip="{{localize 'ANTIQUARIO.Shop.refresh'}}">
+    <i class="fa-solid fa-rotate" aria-hidden="true"></i>
+  </button>
+</div>

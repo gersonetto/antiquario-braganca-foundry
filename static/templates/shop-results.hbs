@@ -1,0 +1,20 @@
+<div class="ab-layout">
+  <nav class="ab-category-nav" aria-label="Categorias">
+    {{#each categories}}
+      <button type="button" class="ab-category-btn" aria-pressed="{{active}}" data-action="toggle-category" data-id="{{id}}">
+        <span>{{label}}</span><span>{{count}}</span>
+      </button>
+    {{/each}}
+  </nav>
+
+  <div>
+    <p class="ab-results-count">{{resultCountLabel}}</p>
+    <section class="ab-grid">
+      {{#each filtered}}
+        {{> antiquario-braganca-item-card this}}
+      {{else}}
+        <p class="ab-empty">{{localize 'ANTIQUARIO.Shop.noResults'}}</p>
+      {{/each}}
+    </section>
+  </div>
+</div>

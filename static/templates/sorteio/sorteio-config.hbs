@@ -1,0 +1,31 @@
+<div class="ab-sorteio-section">
+  <p>{{localize 'ANTIQUARIO.Sorteio.modalidade'}}</p>
+  <div class="ab-modo-grid">
+    {{#each modos}}
+      <button type="button" class="ab-modo-card" role="radio" aria-checked="{{active}}" data-action="set-modo" data-id="{{id}}">
+        <p class="ab-modo-card__title">{{title}}</p>
+        <p class="ab-modo-card__desc">{{description}}</p>
+      </button>
+    {{/each}}
+  </div>
+</div>
+
+<div class="ab-sorteio-section">
+  <p>{{localize 'ANTIQUARIO.Sorteio.raridade'}}</p>
+  <div class="ab-filter-group" role="radiogroup" aria-label="Raridade">
+    {{#each rarities}}
+      <button type="button" class="ab-btn" style="--ab-rarity: var(--ab-rarity-{{id}})" role="radio" aria-checked="{{active}}" data-action="set-rarity" data-id="{{id}}">{{label}}</button>
+    {{/each}}
+  </div>
+</div>
+
+<div class="ab-sorteio-section">
+  <p>{{localize 'ANTIQUARIO.Sorteio.tematica'}}</p>
+  <div class="ab-filter-group" role="radiogroup" aria-label="Categoria">
+    {{#each categories}}
+      <button type="button" class="ab-btn" role="radio" aria-checked="{{active}}" data-action="set-category" data-id="{{id}}">{{label}}</button>
+    {{/each}}
+  </div>
+</div>
+
+<button type="button" class="ab-sorteio-submit" data-action="submit-config">{{localize 'ANTIQUARIO.Sorteio.submit'}}</button>
